@@ -58,7 +58,7 @@ class Client {
 
   async sendStats() {
     console.log(`run sendStats`);
-    let payload = await this.loadAndParseStats(statsPath);
+    let payload = await this.loadAndParseStats(filePath);
     try {
       let res = await request({
         method: "post",
