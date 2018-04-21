@@ -64,7 +64,7 @@ class Client {
     //adding some stuff from the config
     //
     //
-    /
+
     payload.coin = this.currentConfig.target_coin.coin;
     payload.config_hash = this.currentConfig.config_hash;
     payload.last_config_update = this.currentConfig.last_update;
