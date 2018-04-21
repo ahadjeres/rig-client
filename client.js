@@ -52,6 +52,7 @@ class Client {
         logger.log(`array is empty: ${splitResult}`);
       }
     }
+
     logger.log(` data: ${parsedData}`);
     return parsedData;
   }
@@ -59,6 +60,14 @@ class Client {
   async sendStats() {
     console.log(`run sendStats`);
     let payload = await this.loadAndParseStats(statsLocalFile);
+
+    //adding some stuff from the config
+    //
+    //
+    /
+    payload.coin = this.currentConfig.target_coin.coin;
+    payload.config_hash = this.currentConfig.config_hash;
+    payload.last_config_update = this.currentConfig.last_update;
     try {
       let res = await request({
         method: "post",
