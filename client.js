@@ -16,6 +16,7 @@ let apiUrl = liveUrl;
 
 const statsLocalFile = "/var/run/ethos/stats.file";
 const statsPath = "./stats.file";
+const statsFile = statsPath;
 
 const configRigFile = "/home/ethos/local.conf";
 const configTestFile = "./local.conf";
@@ -65,7 +66,7 @@ class Client {
     //
     //
 
-    payload.coin = this.currentConfig.target_coin.coin;
+    payload.coin = this.currentConfig.config.target_coin.coin;
     payload.config_hash = this.currentConfig.config_hash;
     payload.last_config_update = this.currentConfig.last_update;
     try {
