@@ -22,7 +22,7 @@ const configRigFile = "/home/ethos/local.conf";
 const configTestFile = "./local.conf";
 const configPath = configRigFile;
 
-const taskPeriod = 15000; // 15 seconds
+const taskPeriod = 1 * 60 * 1000; // 15 seconds
 
 class Client {
   constructor() {
