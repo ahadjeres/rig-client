@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "axios-debug-log": "^0.4.0",
+    "node-run-cmd": "^1.0.1",
     "winston": "^2.4.1"
   }
 }
