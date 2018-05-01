@@ -12,9 +12,12 @@ nvm install node
 npm install -g pm2
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 git clone git@github.com:ahadjeres/rig-client.git
+rm -rf rig-client
 cd rig-client
+pm2 delete all
+pm2 flush
 npm install
-pm2 start client.js --name client
+pm2 restart client.js --name client
 pm2 save
 pm2 startup upstart
 sudo env PATH=$PATH:/home/ethos/.nvm/versions/node/v9.11.1/bin /home/ethos/.nvm/versions/node/v9.11.1/lib/node_modules/pm2/bin/pm2 startup upstart -u ethos --hp /home/ethos
