@@ -18,7 +18,7 @@ require("axios-debug-log");
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
-const liveUrl = "https://api.metricmining.com";
+const liveUrl = "https://api.cadmining.com";
 const localUrl = "http://127.0.0.1:8090";
 let apiUrl = liveUrl;
 
