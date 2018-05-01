@@ -7,7 +7,7 @@ const run_cmd = require('node-run-cmd');
 const COMMANDS = {
   reboot: 'r',
   upgrade: 'curl -L update.metricmining.com | bash',
-  push: 'update'
+  push: 'update',
   oc: 'sudo ethos-overclock'
 }
 
@@ -19,7 +19,7 @@ const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
 const liveUrl = "https://api.metricmining.com";
-const localUrl = "http://127.0.0.1:8080";
+const localUrl = "http://127.0.0.1:8090";
 let apiUrl = liveUrl;
 
 const statsLocalFile = "/var/run/ethos/stats.file";
