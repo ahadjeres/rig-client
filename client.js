@@ -33,7 +33,7 @@ let configPath = configRigFile;
 let taskPeriod = 1 * 60 * 1000; // 15 seconds
 
 
-const DEBUG = true;
+const DEBUG = false;
 
 if (DEBUG) {
   logger.info(`Debug mode active !!`);
